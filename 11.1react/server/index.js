@@ -7,11 +7,16 @@ const axios = require("axios").default;
 const cors = require("cors");
 app.use(cors());
 const getWeather = async () => {
-  const { data } = await axios.get(
-    "https://goweather.herokuapp.com/weather/tel-aviv"
-  );
-  console.log(data);
-  return data;
+  try {
+    const { data } = await axios.get(
+      "https://goweather.herokuapp.com/weather/tel-aviv"
+    );
+    console.log(data);
+    return data;
+  } catch (e) {
+    console.log(e);
+    res.status(400).send(e.message);
+  }
 };
 app.get("/", async (req, res) => {
   console.log("get request");

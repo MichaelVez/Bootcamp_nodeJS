@@ -5,7 +5,9 @@ function App() {
   const [myData, setMyData] = useState([]);
   useEffect(() => {
     const fetchingData = async () => {
-      const { data } = await axios.get("http://localhost:3005");
+      const { data } = await axios.get(
+        "https://first-heroku-deploy-mvz.herokuapp.com/"
+      );
       console.log(data);
       setMyData(data);
     };
