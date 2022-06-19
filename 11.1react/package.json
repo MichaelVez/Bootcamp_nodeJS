@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/index.js ",
     "client": "npm start --prefix weather ",
+    "react-build": "npm run build --prefix ",
+    "start": "concurrently \"npm run react-build\" \"npm run client\"",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],

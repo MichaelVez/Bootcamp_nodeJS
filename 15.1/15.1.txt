@@ -1,0 +1,11 @@
+show dbs
+use findMyRestaurants
+db.restaurents.insertOne({name:"bbb",loc:{city:"tel-aviv",street:"shlomom amelech 5",coor:[155,7]}
+,type:"burger",kosher:true,review:{date:"today",text:"very good",score:5}})
+
+db.restaurents.insertOne({name:"leo's",loc:{city:'jerusalem',street:'kotel 120',coor:[120,15]}
+,type:'italian',kosher:false,review:[{date:"19-06-2022",text:"best italian food" , score:4.5}]})
+
+db.restaurents.insertOne({name:"tortikali",loc:{city:'haifa',street:'nahnieli 189',coor:[10,15]}
+,type:'mexican',kosher:true,review:[{date:"9-06-2022",text:"best mexica food" , score:4}]})
+db.restaurents.find()
