@@ -1,0 +1,33 @@
+{
+    users:[
+        {
+         _id:id,
+         name:"example",
+         email:"example@example.com",
+         content:{
+            posts:[postID,postID],
+            comments:[commentID,commentID],
+            }
+        }
+    ]
+}
+
+{
+    posts:
+            {
+                postID:postID,
+                postContent:post,
+                postComments:[commentID,commentID]
+
+            },
+}
+
+{        
+    comments:
+            {
+                commentID:commentID,
+                commentContent:content,
+                commentLocation:postID,
+                userID:userID
+            }
+}

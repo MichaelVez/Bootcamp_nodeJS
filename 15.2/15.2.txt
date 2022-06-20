@@ -1,0 +1,36 @@
+CRUD
+1.1
+db.restaurents.find()
+1.2
+db.restaurents.find({type:'mexican'})
+1.3
+db.restaurents.find({kosher:true})
+1.4
+db.restaurents.find({"loc.city":"tel-aviv"})
+1.5
+db.restaurents.find({"loc.street":"shlomom amelech 5"})
+1.6
+db.restaurents.find({"loc.coor":[155,7]})
+1.7
+db.restaurents.find().sort({name:1})
+1.8
+db.restaurents.find().sort({name:-1})
+1.9
+db.restaurents.updateOne({_id: ObjectId("62af7278f198ff586a0d9f78")},{$set:{name:"BBB"}})
+1.10
+db.restaurents.updateOne({_id: ObjectId("62af7278f198ff586a0d9f78")},{$push:{review:{date:"18-06-2022",text:"very nice pink burger",score:5}}})
+1.11
+db.restaurents.updateMany({},{$set:{kosher:true}})
+1.12
+db.restaurents.deleteOne({_id: ObjectId("62af764bf198ff586a0d9f7a")})
+1.13
+db.restaurents.deleteMany({name:{$exists:true}})
+
+2.1
+db.restaurents.find().forEach(user => printjson(user))
+2.2
+db.restaurents.find().forEach(user => printjson(user.loc.city))
+2.3
+db.restaurents.find().forEach(user => printjson(user.loc.coor))
+
+3.1
